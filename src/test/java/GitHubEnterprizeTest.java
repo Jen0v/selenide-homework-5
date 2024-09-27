@@ -16,7 +16,6 @@ public class GitHubEnterprizeTest {
         Configuration.browserSize = "1920*1080";
         Configuration.baseUrl = "https://github.com";
         Configuration.pageLoadStrategy = "eager";
-
     }
     @Test
     void searchEnterprizeTest() {
