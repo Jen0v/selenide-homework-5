@@ -21,7 +21,6 @@ public class DragAndDropTest {
     }
     @Test
     void ChangeElementTest () {
-        // - В Selenide есть команда $(element).dragAndDrop($(to-element)), проверьте работает ли тест, если использовать её вместо actions()
         $("#column-b").dragAndDrop(to($("#column-a")));
         $("div#column-a").shouldHave(text("A"));
     }
