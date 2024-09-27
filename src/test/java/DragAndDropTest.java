@@ -14,13 +14,15 @@ public class DragAndDropTest {
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
-    void ChangeActionsTest () {
+    void сhangeActionsTest () {
     open("https://the-internet.herokuapp.com/drag_and_drop");
+        $("#column-a").shouldHave(text("A"));
+        $("#column-b").shouldHave(text("B"));
     actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(200, 0).release().perform();
         $("#column-b").shouldHave(text("A"));
     }
     @Test
-    void ChangeElementTest () {
+    void сhangeElementTest () {
         $("#column-b").dragAndDrop(to($("#column-a")));
         $("div#column-a").shouldHave(text("A"));
     }
