@@ -1,6 +1,6 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -28,8 +28,8 @@ public class DragAndDropTest {
         $("#column-b").dragAndDrop(to($("#column-a")));
         $("div#column-a").shouldHave(text("A"));
     }
-    @AfterAll
-    static void afterAll() {
+    @AfterEach
+    void afterEach(){
         Selenide.closeWebDriver();
     }
 
